@@ -1,0 +1,69 @@
+ .col {
+     height: 20px;
+     width: 20px;
+     border-radius: 10px;
+     display: inline-block;
+     border: solid black 2px;
+     cursor: pointer;
+ }
+ 
+ .max {
+     text-align: right;
+     margin: 50px;
+ }
+ 
+ #white {
+     background-color: cornsilk;
+ }
+ 
+ #yellow {
+     background-color: rgb(92, 95, 241);
+ }
+ 
+ #green {
+     background-color: greenyellow;
+ }
+ 
+ #black {
+     background-color: black;
+ }
+ 
+ body {
+     text-align: center;
+     text-decoration: bold;
+ }
+ 
+ p {
+     text-align: justify;
+     margin: 50px;
+     padding: 80px 60px;
+     background-color: rgb(184, 120, 243);
+ }
+ 
+ img {
+     border: black;
+     height: 400px;
+     width: 500px;
+     padding: 50px;
+     margin: 0;
+ }
+ 
+ .btn1 {
+     color: white;
+     background-color: black;
+     border-radius: 15px;
+     border: white;
+     padding: 15px;
+     cursor: pointer;
+     text-align: center;
+ }
+ 
+ .btn1:hover {
+     background-color: gray;
+ }
+ 
+ #time {
+     font-size: 30px;
+     text-align: center;
+     font-weight: 200;
+ }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wtllab4.css" />
+    <title>DOM</title>
+    <h1 class="text" id="head">DOM</h1>
+
+
+</head>
+
+<body>
+    <div class="btnwrap">
+        <button class="btn1" onClick="myfun2()">Add Text</button>
+        <button class="btn1" onClick="myfun3()">Remove Text</button>
+    </div>
+    <div class="max">
+        <span id="white" onclick="fun1('#ffffff')" class="col"></span>
+        <!--passing argument as color-->
+        <span id="yellow" onclick="fun1('#0000FF')" class="col"></span>
+
+        <span id="green" onclick="fun1('#DFFF00')" class="col"></span>
+        <span style="border:cornsilk solid 2px;" id="black" onclick="fun1('#000000')" class="col"></span>
+
+    </div>
+    <p id="time"></p>
+    <button class="btn1" style="text-align: center;" onclick="timee()">what is the time?</button>
+    <script>
+        function fun1(color) {
+            let text = document.getElementsByClassName("text");
+            document.body.style.backgroundColor = color;
+
+            if (color == "#000000") {
+                for (let ele of text) {
+                    ele.style.color = "#ffffff";
+                }
+
+
+            } else {
+                for (let ele of text) {
+                    ele.style.color = "#000000";
+                }
+            }
+        }
+        let head = document.getElementById("head");
+        head.addEventListener("mouseover", function() {
+            head.innerHTML = "Document Object Model";
+        })
+        head.addEventListener("mouseout", function() {
+            head.innerHTML = "DOM";
+        })
+
+        function myfun2() {
+            var head = document.createElement("p");
+            head.setAttribute("id", "txt");
+            var head_text = document.createTextNode(" Document Object Model");
+            head.appendChild(head_text);
+            document.body.appendChild(head);
+        }
+
+        function myfun3() {
+            var ele1 = document.getElementById("txt");
+            ele1.remove();
+        }
+
+        function result() {
+            let coin = (Math.random() * 10);
+            if (coin >= 0 && coin < 5)
+                alert("Its HEAD");
+            else if (coin >= 5 && coin <= 9)
+                alert("Its TAIL");
+        }
+
+        function timee() {
+            document.getElementById("time").innerHTML = Date();
+        }
+
+        function colorchange(textcol) {
+            var text1 = textcol.value;
+            if (text1 == 0) {
+                document.body.style.color = "black";
+            } else if (text1 == 1) {
+                document.body.style.color = "red";
+            } else if (text1 == 2) {
+                document.body.style.color = "blue";
+            } else if (text1 == 3) {
+                document.body.style.color = "green";
+            }
+
+        }
+    </script>
+    <label style="font-size: 30px;">Change text color</label>
+    <div>
+        <select class="col" onchange="colorchange(this)">
+      <option value="0">BLACK</option>
+      <option value="1">RED</option>
+       <option value="2">BLUE</option>
+      <option value="3">GREEN</option>
+    </select>
+    </div>
+    <div style="text-align: center;">
+        <h4>COIN TOSS</h4>
+        <div style="text-align:center; padding-left:50%" class="tenor-gif-embed" data-postid="18647378" data-share-method="host" data-aspect-ratio="1" data-width="20%"></div>
+        <button class="btn1" onclick="result()">Toss Coin</button>
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js">
+    </script>
+
+
+    <img src="C:\Users\PC\Desktop\HTML\web image.jpg" id="img1" name="web">
+    <p class="text">
+        When you feel comfortable with HTML and CSS, it is time to dig deeper. You should learn how to use Maps, Fonts and Icons in HTML. On the JavaScript side, you should learn how to access the HTML DOM. You should also learn how to use AJAX and JSON for making
+        server requests. Now it is time to look at some Frameworks. On the CSS side you should choose a framework for reponsive web design: Bootstrap / Material Design / W3.CSS On the JavaScript side you should learn at least one modern framework: React.js
+        / Angular.js / Vue.js / W3.JS Maybe the popularity of jQuery has passed the top, but it is still the most used JavaScript framework. Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript. Responsive Web Design is used
+        in all types of modern web development. ECMAScript 5 (JavaScript 5) is supported in all modern browsers. Take a good look at it, especially the new array functions. Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript.
+        Responsive Web Design is used in all types of modern web development. ECMAScript 5 (JavaScript 5) is supported in all modern browsers. Take a good look at it, especially the new array functions. Every Web Developer must have a basic understanding
+        of HTML, CSS, and JavaScript. Responsive Web Design is used in all types of modern web development. ECMAScript 5 (JavaScript 5) is supported in all modern browsers. Take a good look at it, especially the new array functions. All browsers have
+        a built-in XMLHttpRequest Object (XHR). XHR is a JavaScript object that is used to transfer data between a web browser and a web server. XHR is often used to request and receive data for the purpose of modifying a web page. Despite the XML and
+        Http in the name, XHR is used with other protocols than HTTP, and the data can be of many different types like HTML, CSS, XML, JSON, and plain text. The XHR Object is a Web Developers Dream, because you can: Update a web page without reloading
+        the page Request data from a server - after the page has loaded Receive data from a server - after the page has loaded Send data to a server - in the background
+    </p>
+
+</body>
+
+</html>
